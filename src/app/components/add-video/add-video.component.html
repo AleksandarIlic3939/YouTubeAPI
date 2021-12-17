@@ -1,0 +1,27 @@
+<form [formGroup]="videoForm" (ngSubmit)="submitForm()">
+    <div class="col mb-4 single-input">
+        <label for="title">Title</label>
+        <input formControlName="title" type="text" class="form-control" name="title">
+        <small *ngIf="videoForm.get('title').invalid && videoForm.get('title').touched" class="text-danger">Title is required.</small>
+    </div>
+    <div class="col mb-4 single-input">
+        <label for="link">Link</label>
+        <input formControlName="link" type="text" class="form-control" name="link">
+        <small *ngIf="link.invalid && link.touched" class="text-danger">Link is required.</small>
+    </div>
+    <div class="col mb-4 single-input">
+        <label for="description">Description</label>
+        <input formControlName="description" type="text" class="form-control" name="description">
+        <small *ngIf="description.invalid && description.touched" class="text-danger">Description is required.</small>
+    </div>
+    <div class="col mb-4 single-input">
+        <label for="duration">Duration</label>
+        <input formControlName="duration" type="text" class="form-control" name="duration">
+        <small *ngIf="duration.invalid && duration.touched" class="text-danger">Duration is required.</small>
+    </div>
+    <div class="col button-holder d-flex justify-content-center align-items-center
+    mt-4">
+        <button [disabled]="videoForm.invalid" type="submit" name="submit" class="btn btn-success
+        w-100">Dodaj</button>
+    </div>
+</form>

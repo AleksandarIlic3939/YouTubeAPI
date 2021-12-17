@@ -1,0 +1,12 @@
+<div class="card">
+    <iframe height="100%" [src]="link"></iframe>
+    <div class="card-body">
+        <h5 class="card-title">{{video.title}}</h5>
+        <p class="card-text">{{video.description}}</p>
+        <p class="card-text">{{video.duration}}min</p>
+        <div class="btns d-flex justify-content-between">
+            <a (click)="changeContent()" class="btn btn-primary">Change content</a>
+            <a (click)="deleteVideo()" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+</div>
